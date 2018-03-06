@@ -1,0 +1,119 @@
+@font-face {
+font-family: "Optima";
+src: url("franklin-gotheavy.ttf");
+}
+
+@font-face {
+font-family: "souvenir";
+src: url("souvenir-medium.otf");
+}
+@font-face {
+font-family: "itcavantgarde";
+src: url("itcavantgarde.otf");
+}
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .cell {
+    width: 50%;
+    margin: 0rem;
+    margin-top: -5px;
+    margin-right: auto;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    z-index: 20;
+
+  }
+}
+head{
+  min-height: 100%;
+    position: relative;  
+}
+.overlay{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+}
+
+h1 {
+    font-family: 'Optima',serif;
+    color: #ffffff;
+    font-size: 400%;
+
+}
+h2{
+    font-family: 'souvenir',serif;
+    text-align: center;
+    font-size:350%;
+    color:#000000;
+}
+p{
+    font-family: 'itcavantgarde',sans-serif;
+    text-align: justify;
+    font-size:150%;
+}
+p2{
+    font-family: 'itcavantgarde',sans-serif;
+    text-align: justify;
+    font-size:150%;
+    color: #000000
+}
+    .flip-container {
+	perspective: 100%;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 95%;
+	height: auto;
+    margin-left: 30px;
+    position:absolute;
+    top:130%;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:white;
+    z-index:9999;
+    color:white;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.9s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+
